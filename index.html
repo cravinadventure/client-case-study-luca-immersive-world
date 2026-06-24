@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Field · World Design · Cravin' Adventure Studios</title>
+<title>LUCA · World Design · Cravin' Adventure Studios</title>
 <style>
   :root{--electric:#6C5CE7;--violet:#4A3BAD;--charcoal:#12121f;--ink:#0b0b14;--paper:#f4f3fb;--muted:#9a98b5;--line:rgba(108,92,231,.22)}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -11,31 +11,39 @@
   body{background:var(--ink);color:var(--paper);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   .wrap{max-width:860px;margin:0 auto;padding:0 28px}
   a{color:inherit}
-  nav{position:sticky;top:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 28px;background:radial-gradient(55% 160% at 50% 50%, rgba(108,92,231,.42), rgba(11,11,20,.88) 70%);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  nav .brand{font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase}
+  nav{position:sticky;top:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:15px 28px;background:radial-gradient(55% 160% at 50% 50%, rgba(108,92,231,.42), rgba(11,11,20,.9) 70%);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .brand{font-weight:800;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase}
   nav .brand span{color:var(--electric)}
-  nav .tag{font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:right}
-  .hero{text-align:center;padding:90px 0 44px;background:radial-gradient(900px 440px at 50% -10%, rgba(108,92,231,.32), transparent 70%),linear-gradient(180deg,#15152a 0%,var(--ink) 100%)}
-  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--electric);margin-bottom:20px}
+  nav .tag{font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:right}
+  .subnav{position:sticky;top:50px;z-index:40;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:11px 16px;background:rgba(11,11,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .subnav a{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:7px 15px;border-radius:30px;transition:color .15s,background .15s}
+  .subnav a:hover{color:var(--paper);background:rgba(108,92,231,.14)}
+  .hero{text-align:center;padding:80px 0 40px;background:radial-gradient(900px 440px at 50% -10%, rgba(108,92,231,.32), transparent 70%),linear-gradient(180deg,#15152a 0%,var(--ink) 100%)}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--electric);margin-bottom:18px}
   .hero h1{font-size:clamp(40px,8vw,76px);line-height:.98;font-weight:800;letter-spacing:-2px}
   .hero .sub{max-width:540px;margin:20px auto 0;color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
-  section{padding:60px 0;border-top:1px solid rgba(108,92,231,.08)}
-  .shead{text-align:center;max-width:620px;margin:0 auto 38px}
+  section{padding:58px 0;border-top:1px solid rgba(108,92,231,.1);scroll-margin-top:108px}
+  .shead{text-align:center;max-width:620px;margin:0 auto 36px}
   .shead .k{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--electric);margin-bottom:12px}
-  .shead h2{font-size:clamp(25px,3.8vw,36px);font-weight:800;letter-spacing:-.4px;line-height:1.12}
+  .shead h2{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.5px;line-height:1.1}
   .shead p{margin-top:14px;color:var(--muted);font-size:16px}
-  .feature{max-width:640px;margin:0 auto;border:1px solid var(--line);border-radius:18px;overflow:hidden;line-height:0}
+  .feature{max-width:470px;margin:0 auto 30px;border:1px solid var(--line);border-radius:18px;overflow:hidden;line-height:0}
   .feature img{width:100%;height:auto;display:block}
-  .bio{max-width:600px;margin:0 auto;text-align:center}
-  .bio p{font-size:17px;line-height:1.65;color:#d6d5e6}
+  .bio{max-width:600px;margin:0 auto 34px;text-align:center}
+  .bio p{font-size:16.5px;line-height:1.65;color:#d6d5e6;margin-bottom:14px}
+  .bio p:last-child{margin-bottom:0}
+  .gal{display:grid;gap:14px;margin-bottom:14px}
+  .gal4{grid-template-columns:repeat(4,1fr)}
+  .gal3{grid-template-columns:repeat(3,1fr)}
+  .item{display:flex;flex-direction:column;gap:9px}
+  .item .tile{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);line-height:0}
+  .item img{width:100%;height:auto;display:block}
+  .item .cap{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:center}
   .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:720px;margin:0 auto}
   .role{background:var(--charcoal);border:1px solid var(--line);border-radius:16px;padding:24px 22px}
   .role .rk{font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--electric);margin-bottom:8px}
   .role h3{font-size:19px;font-weight:800;margin-bottom:8px}
   .role p{font-size:14px;color:#cdccdf;line-height:1.6}
-  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:860px;margin:0 auto}
-  .gal .tile{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);line-height:0}
-  .gal img{width:100%;height:auto;display:block}
   .more{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:30px;font-size:14px;font-weight:700;letter-spacing:.3px;text-decoration:none;transition:transform .15s,box-shadow .15s,border-color .15s}
   .btn.primary{background:var(--electric);color:#fff}
@@ -45,7 +53,7 @@
   footer{padding:52px 0 70px;text-align:center;border-top:1px solid var(--line);color:var(--muted)}
   footer .brand{font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--paper);font-size:14px}
   footer a{color:var(--electric);text-decoration:none}
-  @media(max-width:600px){.roles{grid-template-columns:1fr}.gal{grid-template-columns:1fr}}
+  @media(max-width:600px){.gal4,.gal3{grid-template-columns:repeat(2,1fr)}.roles{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -54,97 +62,90 @@
   <div class="brand">CRAVIN' <span>ADVENTURE</span> STUDIOS</div>
   <div class="tag">Client Case Studies</div>
 </nav>
+<div class="subnav">
+  <a href="#character">Character</a>
+  <a href="#field">The Field</a>
+</div>
+
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">LUCA IMMERSIVE · World Design</div>
-    <h1>The Field.</h1>
-    <p class="sub">The world LUCA comes from. A shared, infinite source of imagination.</p>
+    <h1>The world of LUCA.</h1>
+    <p class="sub">The character and the world he comes from. A guide, and the infinite source he draws light from.</p>
   </div>
 </header>
+
 <main>
-<section style="border-top:none;padding-top:46px">
-  <div class="wrap"><div class="feature"><img src="assets/luca_field_1.jpg" alt="The Field"></div></div>
-</section>
-<section style="border-top:none;padding-top:8px">
-  <div class="wrap"><div class="bio">
-    <p>The Field is the source of all imagination. A liminal white space, neither digital nor physical, where ideas first exist as fragments of light and shape. It answers to attention: focus on it and the fragments stabilize into form, look away and they dissolve. It belongs to everyone, and what you pull from it depends only on how clearly you can translate what you find.</p>
-  </div></div>
-</section>
-<section>
+<section id="character">
   <div class="wrap">
-    <div class="shead">
-      <div class="k">The Name</div>
-      <h2>LUCA means two things.</h2>
-      <p>A bringer of light, and the root that everything branches from.</p>
+    <div class="shead"><div class="k">Character</div><h2>Meet LUCA.</h2></div>
+    <div class="feature"><img src="assets/luca_hero.jpg" alt="LUCA"></div>
+    <div class="bio">
+      <p>LUCA is the Field's light given a form. A guide and a translator, not a creator. He reveals what is already there and hands it to the people in the room.</p>
     </div>
+    <div class="gal gal4">
+      <div class="item"><div class="tile"><img src="assets/luca_front.jpg" alt="front"></div><span class="cap">Front</span></div>
+      <div class="item"><div class="tile"><img src="assets/luca_right.jpg" alt="right"></div><span class="cap">Right</span></div>
+      <div class="item"><div class="tile"><img src="assets/luca_back.jpg" alt="back"></div><span class="cap">Back</span></div>
+      <div class="item"><div class="tile"><img src="assets/luca_left.jpg" alt="left"></div><span class="cap">Left</span></div>
+    </div>
+    <div class="gal gal3">
+      <div class="item"><div class="tile"><img src="assets/luca_detail_head.jpg" alt="head"></div><span class="cap">Head</span></div>
+      <div class="item"><div class="tile"><img src="assets/luca_detail_goggles.jpg" alt="goggles"></div><span class="cap">Goggles</span></div>
+      <div class="item"><div class="tile"><img src="assets/luca_detail_chest.jpg" alt="chest"></div><span class="cap">Chest</span></div>
+      <div class="item"><div class="tile"><img src="assets/luca_detail_gloves.jpg" alt="gloves"></div><span class="cap">Gloves</span></div>
+      <div class="item"><div class="tile"><img src="assets/luca_detail_legs.jpg" alt="legs"></div><span class="cap">Legs</span></div>
+      <div class="item"><div class="tile"><img src="assets/luca_detail_boots.jpg" alt="boots"></div><span class="cap">Boots</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="field">
+  <div class="wrap">
+    <div class="shead"><div class="k">The Field</div><h2>The world he comes from.</h2></div>
+    <div class="feature" style="max-width:640px"><img src="assets/luca_field_1.jpg" alt="The Field"></div>
+    <div class="bio" style="max-width:620px">
+      <p>The Field is the source of all imagination. A liminal white space where ideas first exist as fragments of light and shape. It answers to attention: focus on it and the fragments stabilize into form, look away and they dissolve. It belongs to everyone.</p>
+    </div>
+
+    <div class="shead" style="margin-top:10px"><div class="k">The Name</div><h2>LUCA means two things.</h2><p>A bringer of light, and the root that everything branches from.</p></div>
     <div class="roles" style="margin-bottom:34px">
       <div class="role"><div class="rk">Meaning one</div><h3>Bringer of light</h3><p>The physical light of projection and LEDs, and the inner light of awareness and creation. Light, externally through art and internally through self-realization.</p></div>
       <div class="role"><div class="rk">Meaning two</div><h3>Last Universal Common Ancestor</h3><p>In science, LUCA is the single root that every living thing descends from. The Field works the same way: one shared source, and everything imaginable branches out of it.</p></div>
     </div>
-    <div style="max-width:600px;margin:0 auto">
+    <div style="max-width:600px;margin:0 auto 40px">
       <svg viewBox="0 0 620 330" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" stroke="#6C5CE7" stroke-width="1.6" opacity="0.65" stroke-linecap="round">
-          <line x1="310" y1="280" x2="180" y2="180"/>
-          <line x1="310" y1="280" x2="440" y2="180"/>
-          <line x1="180" y1="180" x2="110" y2="95"/>
-          <line x1="180" y1="180" x2="250" y2="95"/>
-          <line x1="440" y1="180" x2="370" y2="95"/>
-          <line x1="440" y1="180" x2="510" y2="95"/>
+          <line x1="310" y1="280" x2="180" y2="180"/><line x1="310" y1="280" x2="440" y2="180"/>
+          <line x1="180" y1="180" x2="110" y2="95"/><line x1="180" y1="180" x2="250" y2="95"/>
+          <line x1="440" y1="180" x2="370" y2="95"/><line x1="440" y1="180" x2="510" y2="95"/>
         </g>
-        <g fill="#6C5CE7">
-          <circle cx="180" cy="180" r="4"/><circle cx="440" cy="180" r="4"/>
-          <circle cx="110" cy="95" r="4"/><circle cx="250" cy="95" r="4"/><circle cx="370" cy="95" r="4"/><circle cx="510" cy="95" r="4"/>
-        </g>
+        <g fill="#6C5CE7"><circle cx="180" cy="180" r="4"/><circle cx="440" cy="180" r="4"/><circle cx="110" cy="95" r="4"/><circle cx="250" cy="95" r="4"/><circle cx="370" cy="95" r="4"/><circle cx="510" cy="95" r="4"/></g>
         <circle cx="310" cy="280" r="8" fill="#6C5CE7"/>
         <text x="310" y="308" fill="#f4f3fb" font-size="16" font-weight="800" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" letter-spacing="1.5">LUCA</text>
         <g fill="#9a98b5" font-size="11" font-weight="700" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" letter-spacing="1.2">
-          <text x="110" y="78">LIGHT</text>
-          <text x="250" y="78">SOUND</text>
-          <text x="370" y="78">STORY</text>
-          <text x="510" y="78">PEOPLE</text>
+          <text x="110" y="78">LIGHT</text><text x="250" y="78">SOUND</text><text x="370" y="78">STORY</text><text x="510" y="78">PEOPLE</text>
         </g>
       </svg>
       <p style="text-align:center;color:var(--muted);font-size:13.5px;margin-top:10px">One source. Endless branches.</p>
+    </div>
+
+    <div class="shead"><div class="k">Who Is In The Field</div><h2>Four roles, one loop.</h2></div>
+    <div class="roles">
+      <div class="role"><div class="rk">The source</div><h3>The Field</h3><p>The undefined white void where all ideas begin. Common property, accessible to anyone who can imagine.</p></div>
+      <div class="role"><div class="rk">The guide</div><h3>LUCA</h3><p>The Field's light given a form. A translator who reveals what is already there. A host, not a creator.</p></div>
+      <div class="role"><div class="rk">The maker</div><h3>The Receiver</h3><p>The human conduit who catches what LUCA reveals and builds it into the real world.</p></div>
+      <div class="role"><div class="rk">The protagonist</div><h3>The Viewer</h3><p>You. Your attention already shapes The Field. The goal is to realize "this is mine too" and become the next maker.</p></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="shead">
-      <div class="k">Who Is In The Field</div>
-      <h2>Four roles, one loop.</h2>
-    </div>
-    <div class="roles">
-      <div class="role"><div class="rk">The source</div><h3>The Field</h3><p>The undefined white void where all ideas begin. Common property, accessible to anyone who can imagine.</p></div>
-      <div class="role"><div class="rk">The guide</div><h3>LUCA</h3><p>The Field's light given a form. A translator who reveals what is already there and hands it to people. A host, not a creator.</p></div>
-      <div class="role"><div class="rk">The maker</div><h3>The Receiver</h3><p>The human conduit who catches what LUCA reveals and builds it into the real world: visuals, stages, stories. Defined by receptivity, not genius.</p></div>
-      <div class="role"><div class="rk">The protagonist</div><h3>The Viewer</h3><p>You. Never passive, your attention already shapes The Field. The goal is to realize "this is mine too" and become the next maker.</p></div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="shead">
-      <div class="k">Inside</div>
-      <h2>A white world, shaped by attention.</h2>
-    </div>
-    <div class="gal">
-      <div class="tile"><img src="assets/luca_field_walk.jpg" alt="The Field"></div>
-      <div class="tile"><img src="assets/luca_field_3.jpg" alt="The Field"></div>
-      <div class="tile"><img src="assets/luca_field_1.jpg" alt="The Field"></div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="shead">
-      <div class="k">The Point</div>
-      <h2>Creativity is a shared resource.</h2>
-      <p>The whole world is built on one idea: imagination is infinite and common, reached through a guide, and meant to be handed on. The viewer becomes a maker too.</p>
-    </div>
+    <div class="shead"><div class="k">More</div><h2>The rest of LUCA's world.</h2></div>
     <div class="more">
-      <a class="btn primary" href="https://cravinadventure.github.io/client-case-study-luca-immersive-character/" target="_blank" rel="noopener">Meet LUCA &rarr;</a>
+      <a class="btn primary" href="https://cravinadventure.github.io/client-case-study-luca-immersive/" target="_blank" rel="noopener">The Interactive Event &rarr;</a>
+      <a class="btn ghost" href="https://cravinadventure.github.io/luca-epk/" target="_blank" rel="noopener">Press Kit &rarr;</a>
       <a class="btn ghost" href="https://cravinadventure.github.io/client-case-studies/" target="_blank" rel="noopener">All case studies &rarr;</a>
     </div>
   </div>
