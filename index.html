@@ -24,10 +24,12 @@
   .hero .sub{max-width:540px;margin:20px auto 0;color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
   section{padding:58px 0;border-top:1px solid rgba(108,92,231,.1);scroll-margin-top:108px}
   .shead{text-align:center;max-width:620px;margin:0 auto 36px}
+  .shead.mt{margin-top:48px}
   .shead .k{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--electric);margin-bottom:12px}
-  .shead h2{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.5px;line-height:1.1}
+  .shead h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;letter-spacing:-.5px;line-height:1.12}
   .shead p{margin-top:14px;color:var(--muted);font-size:16px}
   .feature{max-width:470px;margin:0 auto 30px;border:1px solid var(--line);border-radius:18px;overflow:hidden;line-height:0}
+  .feature.wide{max-width:640px}
   .feature img{width:100%;height:auto;display:block}
   .bio{max-width:600px;margin:0 auto 34px;text-align:center}
   .bio p{font-size:16.5px;line-height:1.65;color:#d6d5e6;margin-bottom:14px}
@@ -35,6 +37,7 @@
   .gal{display:grid;gap:14px;margin-bottom:14px}
   .gal4{grid-template-columns:repeat(4,1fr)}
   .gal3{grid-template-columns:repeat(3,1fr)}
+  .gal2{grid-template-columns:repeat(2,1fr)}
   .item{display:flex;flex-direction:column;gap:9px}
   .item .tile{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);line-height:0}
   .item img{width:100%;height:auto;display:block}
@@ -78,17 +81,22 @@
 <main>
 <section id="character">
   <div class="wrap">
-    <div class="shead"><div class="k">Character</div><h2>Meet LUCA.</h2></div>
+    <div class="shead"><div class="k">Character</div><h2>Meet LUCA.</h2><p>The face of The Field. A guide given form, designed from every angle.</p></div>
     <div class="feature"><img src="assets/luca_hero.jpg" alt="LUCA"></div>
     <div class="bio">
-      <p>LUCA is the Field's light given a form. A guide and a translator, not a creator. He reveals what is already there and hands it to the people in the room.</p>
+      <p>LUCA is the character at the heart of the LUCA IMMERSIVE world. In the story, everything imaginable lives in a place called The Field, a white space where ideas first take shape.</p>
+      <p>LUCA is that field's light, given a form. A guide and a translator, not a creator. He reveals what is already there and hands it to the people in the room. The face of a shared, infinite source of imagination.</p>
     </div>
+
+    <div class="shead mt"><h2>Designed from every angle.</h2></div>
     <div class="gal gal4">
       <div class="item"><div class="tile"><img src="assets/luca_front.jpg" alt="front"></div><span class="cap">Front</span></div>
       <div class="item"><div class="tile"><img src="assets/luca_right.jpg" alt="right"></div><span class="cap">Right</span></div>
       <div class="item"><div class="tile"><img src="assets/luca_back.jpg" alt="back"></div><span class="cap">Back</span></div>
       <div class="item"><div class="tile"><img src="assets/luca_left.jpg" alt="left"></div><span class="cap">Left</span></div>
     </div>
+
+    <div class="shead mt"><h2>Every detail, considered.</h2><p>The look was built piece by piece, from the mask down to the boots.</p></div>
     <div class="gal gal3">
       <div class="item"><div class="tile"><img src="assets/luca_detail_head.jpg" alt="head"></div><span class="cap">Head</span></div>
       <div class="item"><div class="tile"><img src="assets/luca_detail_goggles.jpg" alt="goggles"></div><span class="cap">Goggles</span></div>
@@ -97,23 +105,29 @@
       <div class="item"><div class="tile"><img src="assets/luca_detail_legs.jpg" alt="legs"></div><span class="cap">Legs</span></div>
       <div class="item"><div class="tile"><img src="assets/luca_detail_boots.jpg" alt="boots"></div><span class="cap">Boots</span></div>
     </div>
+
+    <div class="shead mt"><h2>Where LUCA lives.</h2><p>The Field is a white void until someone gives it attention. LUCA moves through it, pulling fragments into form.</p></div>
+    <div class="gal gal2">
+      <div class="item"><div class="tile"><img src="assets/luca_field_1.jpg" alt="LUCA in The Field"></div></div>
+      <div class="item"><div class="tile"><img src="assets/luca_field_walk.jpg" alt="LUCA walking in The Field"></div></div>
+    </div>
   </div>
 </section>
 
 <section id="field">
   <div class="wrap">
     <div class="shead"><div class="k">The Field</div><h2>The world he comes from.</h2></div>
-    <div class="feature" style="max-width:640px"><img src="assets/luca_field_1.jpg" alt="The Field"></div>
+    <div class="feature wide"><img src="assets/luca_field_3.jpg" alt="The Field"></div>
     <div class="bio" style="max-width:620px">
-      <p>The Field is the source of all imagination. A liminal white space where ideas first exist as fragments of light and shape. It answers to attention: focus on it and the fragments stabilize into form, look away and they dissolve. It belongs to everyone.</p>
+      <p>The Field is the source of all imagination. A liminal white space where ideas first exist as fragments of light and shape. It answers to attention: focus on it and the fragments stabilize into form, look away and they dissolve. It belongs to everyone, and what you pull from it depends only on how clearly you can translate what you find.</p>
     </div>
 
-    <div class="shead" style="margin-top:10px"><div class="k">The Name</div><h2>LUCA means two things.</h2><p>A bringer of light, and the root that everything branches from.</p></div>
+    <div class="shead mt"><div class="k">The Name</div><h2>LUCA means two things.</h2><p>A bringer of light, and the root that everything branches from.</p></div>
     <div class="roles" style="margin-bottom:34px">
       <div class="role"><div class="rk">Meaning one</div><h3>Bringer of light</h3><p>The physical light of projection and LEDs, and the inner light of awareness and creation. Light, externally through art and internally through self-realization.</p></div>
       <div class="role"><div class="rk">Meaning two</div><h3>Last Universal Common Ancestor</h3><p>In science, LUCA is the single root that every living thing descends from. The Field works the same way: one shared source, and everything imaginable branches out of it.</p></div>
     </div>
-    <div style="max-width:600px;margin:0 auto 40px">
+    <div style="max-width:600px;margin:0 auto 8px">
       <svg viewBox="0 0 620 330" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" stroke="#6C5CE7" stroke-width="1.6" opacity="0.65" stroke-linecap="round">
           <line x1="310" y1="280" x2="180" y2="180"/><line x1="310" y1="280" x2="440" y2="180"/>
@@ -130,13 +144,22 @@
       <p style="text-align:center;color:var(--muted);font-size:13.5px;margin-top:10px">One source. Endless branches.</p>
     </div>
 
-    <div class="shead"><div class="k">Who Is In The Field</div><h2>Four roles, one loop.</h2></div>
+    <div class="shead mt"><div class="k">Who Is In The Field</div><h2>Four roles, one loop.</h2></div>
     <div class="roles">
       <div class="role"><div class="rk">The source</div><h3>The Field</h3><p>The undefined white void where all ideas begin. Common property, accessible to anyone who can imagine.</p></div>
       <div class="role"><div class="rk">The guide</div><h3>LUCA</h3><p>The Field's light given a form. A translator who reveals what is already there. A host, not a creator.</p></div>
       <div class="role"><div class="rk">The maker</div><h3>The Receiver</h3><p>The human conduit who catches what LUCA reveals and builds it into the real world.</p></div>
       <div class="role"><div class="rk">The protagonist</div><h3>The Viewer</h3><p>You. Your attention already shapes The Field. The goal is to realize "this is mine too" and become the next maker.</p></div>
     </div>
+
+    <div class="shead mt"><h2>A white world, shaped by attention.</h2></div>
+    <div class="gal gal3">
+      <div class="item"><div class="tile"><img src="assets/luca_field_walk.jpg" alt="The Field"></div></div>
+      <div class="item"><div class="tile"><img src="assets/luca_field_3.jpg" alt="The Field"></div></div>
+      <div class="item"><div class="tile"><img src="assets/luca_field_1.jpg" alt="The Field"></div></div>
+    </div>
+
+    <div class="shead mt"><div class="k">The Point</div><h2>Creativity is a shared resource.</h2><p>The whole world is built on one idea: imagination is infinite and common, reached through a guide, and meant to be handed on. The viewer becomes a maker too.</p></div>
   </div>
 </section>
 
